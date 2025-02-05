@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "main/css/main.css" %}">
+
+
+    <title>
+    {% block title %}
+    {% endblock  %}
+    </title>
+</head>
+<body>
+    <aside>
+       <h1><span>Envyn</span></h1>
+       <h3> Navigation </h3>
+        <ul>
+            <a href="{% url "main" %}">Main</a> <br>
+            <a href="{% url "about" %}">About us</a> <br>
+            <a href="">Contacts</a> <br>
+        </ul>
+    </aside>
+    <main>
+    {% block center %}
+    {% endblock  %}
+    </main>
+</body>
+</html>

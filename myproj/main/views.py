@@ -6,4 +6,4 @@ def index(request):
     return render(request,'main/index.html')
 
 def about(request):
-    return HttpResponse("<h4>Strona pro nas</h4>")
+    return render(request,'main/about.html')

@@ -1,12 +1,26 @@
 {% extends "main/outlayer.html" %}
 
-{% block title %}Envy{% endblock  %}
+{% block title %}
+
+{{title}}
+
+{% endblock  %}
 
 
 
 
 {% block center %}
+<div class = "main">
+<h1>Main</h1>
+<p>This is my internet web site for my portfolio that is showing my intilect issues for whole world) </p>
+<p>This Django project is made by MaxiSnow123e  </p>
+{{title}}
 
-<h1>Main </h1>
+{% for el  in  values%}
 
+{{el}}
+
+{% endfor %}
+
+</div>
 {% endblock  %}

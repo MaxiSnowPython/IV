@@ -3,7 +3,11 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    return render(request,'main/index.html')
+    data = {
+    'title': 'Envy',
+    'values': ['Max','Is','The','Best']
+    }
+    return render(request,'main/index.html',data)
 
 def about(request):
     return render(request,'main/about.html')

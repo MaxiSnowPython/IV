@@ -11,16 +11,40 @@
 
 {% block center %}
 <div class = "main">
+
+{% for el in teachers %}
+<li>
+    {{el.name}} 
+</li>
+{% endfor %}
+
 <h1>Main</h1>
 <p>This is my internet web site for my portfolio that is showing my intilect issues for whole world) </p>
 <p>This Django project is made by MaxiSnow123e  </p>
 {{title}}
-
-{% for el  in  values%}
-
-{{el}}
-
+{% for book in books %}
+<li><strong>{{ book.title }}</strong> — {{ book.author }} ({{ book.published_date }})</li> <br>
 {% endfor %}
+</div>
+
+
+<div class="get_info">
+    
+    <form action="" method="post">
+    {% csrf_token %}
+    <label for="text1">This is first text</label>
+    <input type="text" name="text1" id="text1"> <br>
+    
+    
+    <label for="text2">This is second text</label>
+    <input type="text" name="text2" id="text2"><br>
+    
+    
+    <label for="text3">This is third text</label>
+    <input type="text" name="text3" id="text3"><br>
+    <button type="submit">Добавить текст</button>
+    </form>
 
 </div>
+
 {% endblock  %}

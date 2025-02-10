@@ -10,6 +10,6 @@ urlpatterns = [
 
   path('about',views.about, name='about'),
 
-
+  path('newg', views.newg, name = 'newg'),
 
 ]

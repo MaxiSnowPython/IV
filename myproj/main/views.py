@@ -18,3 +18,6 @@ def index(request):
 
 def about(request):
     return render(request,'main/about.html')
+
+def newg(request):
+   return render(request,'newg/new_test.html')
